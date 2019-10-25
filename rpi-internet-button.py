@@ -7,7 +7,7 @@ def enable_internet():
 	global internet_on
 	if internet_on == False:
 		print("Enabling internet")
-		os.system("ifconfig eth1 up")
+		os.system("ifup eth1")
 		internet_on = True
 
 def disable_internet():
