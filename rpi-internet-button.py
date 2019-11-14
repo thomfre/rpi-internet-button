@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import os
+import time
 
 internet_on = False
 
@@ -31,7 +32,7 @@ GPIO.add_event_detect(7, GPIO.BOTH, callback = button_callback)
 
 while True:
 	GPIO.input(7)
-	#Do nothing
+	time.sleep(0.1)
 
 
 GPIO.cleanup()
